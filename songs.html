@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>MUSIC APP</title>
+</head>
+<body>
+<header>
+    <div class="menu_column">
+        <h1>My Music App</h1>
+        <div id="date"></div>
+        <div id="time"></div>
+        <script>
+            function updateDateTime() {
+                var currentDate = new Date();
+                var dateString = currentDate.toLocaleDateString();
+                var timeString = currentDate.toLocaleTimeString();
+                document.getElementById('date').textContent = " " + dateString;
+                document.getElementById('time').textContent = " " + timeString;
+            }
+
+            // Update the date and time every second
+            setInterval(updateDateTime, 1000);
+
+            // Initialize on page load
+            window.onload = updateDateTime;
+        </script>
+
+        <h1>Library</h1>
+        <nav>
+            <div class="Search">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+        <div class="library">
+            <h4><span></span><i class="bi bi-house-door"></i><a href="main.html">Home</a></h4>
+            <h4 class="active"><span></span><i class="bi bi-music-note-beamed"></i><a href = "songs.html">All songs</a></h4>
+            <h4><span></span><i class="bi bi-music-note-list"></i><a href = "playlist.html">Playlists</a></h4>
+            <h4><span></span><i class="bi bi-heart-fill"></i>Favorites</h4>
+            <h4><span></span><i class="bi bi-file-music-fill"></i>Recently Played</h4>
+        </div>
+        <div class="library_songs">
+            <li class="song_item">
+                <span>01</span>
+                <img src="./images/01.jpg" alt="">
+                <h5>Unsure<br> <div class="subtitles">Alan Walker</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="01"></i>
+            </li>
+            <li class="song_item">
+                <span>02</span>
+                <img src="./images/02.jpg" alt="">
+                <h5>Who I Am<br> <div class="subtitles">Alan Walker</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="02"></i>
+            </li>
+            <li class="song_item">
+                <span>03</span>
+                <img src="./images/03.jpg" alt="">
+                <h5>Let It Go<br> <div class="subtitles">Indina Menzel</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="03"></i>
+            </li>
+            <li class="song_item">
+                <span>04</span>
+                <img src="./images/04.jpg" alt="">
+                <h5>Maghron La<br> <div class="subtitles">Rozeo & Sabri Sisters</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="04"></i>
+            </li>
+            <li class="song_item">
+                <span>05</span>
+                <img src="./images/05.jpg" alt="">
+                <h5>Pasoori<br> <div class="subtitles">Ali Sethi & Shae Gill</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="05"></i>
+            </li>
+            <li class="song_item">
+                <span>06</span>
+                <img src="./images/06.jpg" alt="">
+                <h5>Dreamers<br> <div class="subtitles">Jungkook</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="06"></i>
+            </li>
+            <li class="song_item">
+                <span>07</span>
+                <img src="./images/07.jpg" alt="">
+                <h5>Blank Space<br> <div class="subtitles">Taylor Swift</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="07"></i>
+            </li>
+            <li class="song_item">
+                <span>08</span>
+                <img src="./images/08.jpg" alt="">
+                <h5>Photograph<br> <div class="subtitles">Ed Sheeran</div></h5>
+                <i class="bi libraryPlay bi-play-circle" id="08"></i>
+            </li>
+        </div>
+    </div>
+
+    <div class="All_Songs">
+        <nav>
+            <ul>
+                <li>Discover<span></span></li>
+                <li>Albums</li>
+                <li>Artists</li>
+            </ul>
+        </nav>
+        
+             <table>
+                <tr>
+                    <th>Song Name</th>
+                    <th>Artist</th>
+                    <th>Duration</th>
+                    <th>Add to Favorites</th>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Unsure</td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Who I Am</td>
+                    <td>Alan Walker</td>
+                    <td>4:12</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Let It Go</td>
+                    <td>Indina Menzel</td>
+                    <td>3:45</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Maghron La</td>
+                    <td>Rozeo & Sabri Sisters</td>
+                    <td>4:00</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Pasoori</td>
+                    <td>Ali Sethi & Shae Gill</td>
+                    <td>3:20</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Lilly</td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Alone</td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Faded</td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Blue </td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Extremes</td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="bi libraryPlay bi-play-circle" id="1"></i> &nbsp Heart Over Mind</td>
+                    <td>Alan Walker</td>
+                    <td>3:25</td>
+                    <td><i class="bi bi-heart"></i></td>
+                </tr>
+            </table>
+        
+    </div>
+
+    <div class="main_player">
+        <div class="wave" id="wave">
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+        </div>
+        <img src="./images/main_player.jpg" alt="" id="poster_main_player">
+        <h5 id="title">Alone pt 2
+            <div class="subtitle">Alan Walker feat Ava Max</div>
+        </h5>
+        <div class="music_icons">
+            <i class="bi shuffle bi-music-note-list">next</i>
+            <i class="bi bi-skip-backward-circle" id="back"></i>
+            <i class="bi bi-play-circle-fill" id="masterPlay"></i>
+            <i class="bi bi-skip-forward-circle" id="next"></i>
+            <i class="bi bi-file-arrow-down-fill" id="download_song"></i>
+        </div>
+        <span id="NowPlaying">0:00</span>
+        <div class="statusbar">
+            <input type="range" id="look" min="0" max="100">
+            <div class="statusbar1" id="statusbar1"></div>
+            <div class="dot"></div>
+        </div>
+        <span id="EndPlaying">0:30</span>
+        <div class="volume">
+            <i class="bi bi-volume-up-fill" id="volume_icon"></i>
+            <input type="range" min="0" max="100" id="volume">
+            <div class="volumebar"></div>
+            <div class="dot" id="volumedot"></div>
+        </div>
+    </div>
+</header>
+ <script src="app.js"></script>
+</body>
+</html>
